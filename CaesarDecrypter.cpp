@@ -27,6 +27,8 @@ int main(){
 	    for(int i = 0; i < input.size(); i++){
             if(input[i] == ' '){
                 output = output + " ";
+            }else if(input[i] < 65 || (input[i] > 90 && input[i] < 97) || input[i] > 122){
+                output = output + input[i];
             }else{
                 output = output + ((input[i] >= 97)?(arr[((val[input[i]]-key<0)?(val[input[i]]-key+26):(val[input[i]]-key))%26]):(arr2[((val[input[i]]-key<0)?(val[input[i]]-key+26):(val[input[i]]-key))%26]));
             }
